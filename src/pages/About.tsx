@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ImageIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import coffeeBeans from "@/assets/coffee-beans.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import latteArt from "@/assets/latte-art.jpg";
-import pastries from "@/assets/pastries.jpg";
 
 const timeline = [
   { year: "2018", title: "The Dream Begins", desc: "Two friends with a shared passion for specialty coffee opened a small roastery." },
@@ -15,8 +11,6 @@ const timeline = [
   { year: "2023", title: "Award-Winning", desc: "Named 'Best Artisan Coffee Shop' by City Life Magazine." },
   { year: "2025", title: "Growing Family", desc: "Opened our second location and launched our signature bean subscription." },
 ];
-
-const gallery = [coffeeBeans, cafeInterior, latteArt, pastries];
 
 const About = () => (
   <main className="pt-20">
@@ -76,13 +70,16 @@ const About = () => (
           <h2 className="font-heading text-3xl font-bold text-center mb-10">Gallery</h2>
         </AnimatedSection>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {gallery.map((img, i) => (
+          {[1, 2, 3, 4].map((i) => (
             <AnimatedSection key={i} delay={i * 0.1}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="rounded-2xl overflow-hidden shadow-lg cursor-pointer aspect-square"
+                className="rounded-2xl overflow-hidden shadow-lg cursor-pointer aspect-square bg-muted border-2 border-dashed border-border flex items-center justify-center"
               >
-                <img src={img} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover" />
+                <div className="text-center p-4">
+                  <ImageIcon className="w-10 h-10 text-muted-foreground/40 mx-auto mb-2" />
+                  <p className="text-xs text-muted-foreground/60">Gallery image {i}</p>
+                </div>
               </motion.div>
             </AnimatedSection>
           ))}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Coffee, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -40,7 +40,10 @@ const Navbar = () => {
     >
       <nav className="container-cafe flex items-center justify-between h-16 sm:h-20">
         <Link to="/" className="flex items-center gap-2 group">
-          <Coffee className="w-7 h-7 text-secondary transition-transform duration-300 group-hover:rotate-12" />
+          {/* Replace with your logo */}
+          <div className="w-8 h-8 rounded-lg bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary font-heading font-bold text-sm">
+            B
+          </div>
           <span className="font-heading text-xl sm:text-2xl font-bold text-foreground">
             Brew & <span className="text-secondary">Bloom</span>
           </span>

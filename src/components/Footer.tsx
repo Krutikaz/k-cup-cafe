@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Coffee, Instagram, Facebook, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, Facebook, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-espresso text-espresso-foreground">
@@ -8,7 +8,9 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <Coffee className="w-6 h-6 text-secondary" />
+            <div className="w-7 h-7 rounded-lg bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary font-heading font-bold text-xs">
+              B
+            </div>
             <span className="font-heading text-xl font-bold">Brew & Bloom</span>
           </div>
           <p className="text-sm text-espresso-foreground/70 leading-relaxed mb-6">

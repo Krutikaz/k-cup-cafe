@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Star, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Star, Clock, Sparkles, ImageIcon } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroCafe from "@/assets/hero-cafe.jpg";
-import latteArt from "@/assets/latte-art.jpg";
-import pastries from "@/assets/pastries.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import coffeeSteamGif from "@/assets/coffee-steam.gif";
 
-const heroImages = [heroCafe, latteArt, pastries];
 const heroTaglines = [
   "Where Every Cup Tells a Story",
   "Artisan Coffee, Crafted With Love",
@@ -31,27 +25,23 @@ const Index = () => {
   const [heroIdx, setHeroIdx] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setHeroIdx((i) => (i + 1) % heroImages.length), 5000);
+    const t = setInterval(() => setHeroIdx((i) => (i + 1) % heroTaglines.length), 5000);
     return () => clearInterval(t);
   }, []);
 
   return (
     <main>
       {/* Hero */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={heroIdx}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <img src={heroImages[heroIdx]} alt="Cafe" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-espresso/80 via-espresso/50 to-transparent" />
-          </motion.div>
-        </AnimatePresence>
+      <section className="relative h-screen min-h-[600px] overflow-hidden bg-gradient-to-br from-primary via-espresso to-primary">
+        {/* Placeholder for hero background image */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-primary-foreground/30">
+            <ImageIcon className="w-16 h-16 mx-auto mb-3" />
+            <p className="text-sm font-medium">Add your hero image here</p>
+            <p className="text-xs mt-1">Replace this section's background with your cafe photo</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-espresso/80 via-espresso/50 to-transparent" />
 
         <div className="relative z-10 container-cafe h-full flex items-center">
           <div className="max-w-xl">
@@ -71,7 +61,7 @@ const Index = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6"
+                className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
               >
                 {heroTaglines[heroIdx]}
               </motion.h1>
@@ -81,7 +71,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-cream/80 text-lg mb-8 max-w-md"
+              className="text-primary-foreground/80 text-lg mb-8 max-w-md"
             >
               Artisan coffee, fresh pastries, and a warm atmosphere where community blossoms.
             </motion.p>
@@ -95,34 +85,24 @@ const Index = () => {
               <Link to="/menu" className="btn-primary-cafe bg-secondary text-secondary-foreground hover:bg-caramel">
                 View Menu <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
-              <Link to="/reservation" className="btn-secondary-cafe border-cream/40 text-cream hover:bg-cream/10">
+              <Link to="/reservation" className="btn-secondary-cafe border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
                 Book a Table
               </Link>
             </motion.div>
 
             {/* Hero dots */}
             <div className="flex gap-2 mt-10">
-              {heroImages.map((_, i) => (
+              {heroTaglines.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setHeroIdx(i)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    i === heroIdx ? "bg-secondary w-8" : "bg-cream/40"
+                    i === heroIdx ? "bg-secondary w-8" : "bg-primary-foreground/40"
                   }`}
                 />
               ))}
             </div>
           </div>
-
-          {/* Animated coffee GIF */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-secondary/30 shadow-2xl backdrop-blur-sm bg-espresso/30 z-10"
-          >
-            <img src={coffeeSteamGif} alt="Steaming coffee" className="w-full h-full object-cover mix-blend-screen opacity-90" />
-          </motion.div>
         </div>
       </section>
 
@@ -179,15 +159,20 @@ const Index = () => {
                 </Link>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <motion.div whileHover={{ scale: 1.03 }} className="rounded-2xl overflow-hidden shadow-lg">
-                  <img src={latteArt} alt="Latte art" className="w-full h-48 object-cover" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.03 }} className="rounded-2xl overflow-hidden shadow-lg mt-8">
-                  <img src={cafeInterior} alt="Cafe interior" className="w-full h-48 object-cover" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.03 }} className="rounded-2xl overflow-hidden shadow-lg col-span-2">
-                  <img src={pastries} alt="Pastries" className="w-full h-40 object-cover" />
-                </motion.div>
+                {["Your image 1", "Your image 2", "Your image 3"].map((label, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.03 }}
+                    className={`rounded-2xl overflow-hidden shadow-lg bg-muted border-2 border-dashed border-border flex items-center justify-center ${
+                      i === 2 ? "col-span-2 h-40" : i === 1 ? "mt-8 h-48" : "h-48"
+                    }`}
+                  >
+                    <div className="text-center p-4">
+                      <ImageIcon className="w-8 h-8 text-muted-foreground/40 mx-auto mb-2" />
+                      <p className="text-xs text-muted-foreground/60">{label}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </AnimatedSection>
