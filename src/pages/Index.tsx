@@ -112,7 +112,16 @@ const Index = () => {
                 />
               ))}
             </div>
-          </div>
+
+            {/* Animated coffee GIF */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.8 }}
+              className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-secondary/30 shadow-2xl backdrop-blur-sm bg-espresso/30"
+            >
+              <img src={coffeeSteamGif} alt="Steaming coffee" className="w-full h-full object-cover mix-blend-screen opacity-90" />
+            </motion.div>
         </div>
       </section>
 
