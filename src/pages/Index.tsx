@@ -7,6 +7,7 @@ import heroCafe from "@/assets/hero-cafe.jpg";
 import latteArt from "@/assets/latte-art.jpg";
 import pastries from "@/assets/pastries.jpg";
 import cafeInterior from "@/assets/cafe-interior.jpg";
+import coffeeSteamGif from "@/assets/coffee-steam.gif";
 
 const heroImages = [heroCafe, latteArt, pastries];
 const heroTaglines = [
