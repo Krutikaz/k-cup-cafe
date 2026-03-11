@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, Quote, ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
-import coffeeBeans from "@/assets/coffee-beans.jpg";
-import heroCafe from "@/assets/hero-cafe.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
 
 const testimonials = [
   { name: "Sarah M.", rating: 5, text: "The most welcoming cafe I've ever been to. The caramel latte is an absolute dream — I come here every morning.", avatar: "SM" },
@@ -24,26 +21,24 @@ const Experience = () => {
 
   return (
     <main className="pt-20">
-      {/* Parallax Hero */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
-        <motion.div
-          className="absolute inset-0"
-          style={{ y: 0 }}
-          whileInView={{ y: -30 }}
-          transition={{ duration: 0 }}
-        >
-          <img src={coffeeBeans} alt="Coffee roasting" className="w-full h-[120%] object-cover" />
-          <div className="absolute inset-0 bg-espresso/60" />
-        </motion.div>
+      {/* Hero */}
+      <section className="relative h-[60vh] min-h-[400px] overflow-hidden bg-gradient-to-br from-primary via-espresso to-primary">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-primary-foreground/30">
+            <ImageIcon className="w-16 h-16 mx-auto mb-3" />
+            <p className="text-sm font-medium">Add your experience hero image</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-espresso/60" />
         <div className="relative z-10 container-cafe h-full flex items-center justify-center text-center">
           <AnimatedSection>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-cream mb-4">The Brew & Bloom Experience</h1>
-            <p className="text-cream/80 text-lg max-w-xl mx-auto">More than coffee — a sensory journey through taste, aroma, and warmth.</p>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">The Brew & Bloom Experience</h1>
+            <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto">More than coffee — a sensory journey through taste, aroma, and warmth.</p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Story sections with parallax */}
+      {/* Story sections */}
       <section className="section-padding">
         <div className="container-cafe">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -57,16 +52,22 @@ const Experience = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={heroCafe} alt="Cafe experience" className="w-full h-80 object-cover" />
+              <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden shadow-xl bg-muted border-2 border-dashed border-border h-80 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <ImageIcon className="w-12 h-12 text-muted-foreground/40 mx-auto mb-3" />
+                  <p className="text-sm text-muted-foreground/60">Add your cafe experience image</p>
+                </div>
               </motion.div>
             </AnimatedSection>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection delay={0.1} className="order-2 lg:order-1">
-              <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={cafeInterior} alt="Cozy interior" className="w-full h-80 object-cover" />
+              <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden shadow-xl bg-muted border-2 border-dashed border-border h-80 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <ImageIcon className="w-12 h-12 text-muted-foreground/40 mx-auto mb-3" />
+                  <p className="text-sm text-muted-foreground/60">Add your interior image</p>
+                </div>
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
