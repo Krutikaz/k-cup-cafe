@@ -6,7 +6,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 
 const timeline = [
   { year: "2018", title: "The Dream Begins", desc: "Two friends with a shared passion for specialty coffee opened a small roastery." },
-  { year: "2019", title: "First Location", desc: "Brew & Bloom found its home in the heart of Garden District." },
+  { year: "2019", title: "First Location", desc: "K Cup Cafe found its home in the heart of Garden District." },
   { year: "2021", title: "Community Hub", desc: "We expanded with a reading nook, live music nights, and local art exhibits." },
   { year: "2023", title: "Award-Winning", desc: "Named 'Best Artisan Coffee Shop' by City Life Magazine." },
   { year: "2025", title: "Growing Family", desc: "Opened our second location and launched our signature bean subscription." },
@@ -20,7 +20,7 @@ const About = () => (
         <AnimatedSection>
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Our Story</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            Born from a love for craft coffee and community, Brew & Bloom is more than a cafe — it's a gathering place where stories steep alongside espresso.
+            Born from a love for craft coffee and community, K Cup Cafe is more than a cafe — it's a gathering place where stories steep alongside espresso.
           </p>
         </AnimatedSection>
       </div>
