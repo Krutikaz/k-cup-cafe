@@ -28,7 +28,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
           <div className="flex flex-col gap-2">
-            {[{ to: "/menu", label: "Our Menu" }, { to: "/about", label: "Our Story" }, { to: "/experience", label: "Experience" }, { to: "/reservation", label: "Reservations" }, { to: "/contact", label: "Contact" }].map(l => (
+            {[{ to: "/menu", label: "Our Menu" }, { to: "/about", label: "Our Story" }, { to: "/reservation", label: "Reservations" }, { to: "/contact", label: "Contact" }].map(l => (
               <Link key={l.to} to={l.to} className="text-sm text-espresso-foreground/70 hover:text-secondary transition-colors">{l.label}</Link>
             ))}
           </div>

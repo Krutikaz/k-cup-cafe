@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import MenuPage from "./pages/MenuPage";
-import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Reservation from "./pages/Reservation";
 import NotFound from "./pages/NotFound";
@@ -26,7 +25,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<MenuPage />} />
-          <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="*" element={<NotFound />} />
