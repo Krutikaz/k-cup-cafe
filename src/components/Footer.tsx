@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-espresso text-espresso-foreground">
@@ -8,10 +9,8 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-7 h-7 rounded-lg bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary font-heading font-bold text-xs">
-              B
-            </div>
-            <span className="font-heading text-xl font-bold">Brew & Bloom</span>
+            <img src={logo} alt="K Cup Cafe" className="w-9 h-9 object-contain" />
+            <span className="font-heading text-xl font-bold">K Cup <span className="text-secondary">Cafe</span></span>
           </div>
           <p className="text-sm text-espresso-foreground/70 leading-relaxed mb-6">
             Crafting moments of warmth, one cup at a time. Artisan coffee, fresh pastries, and a space to call your own.
@@ -41,7 +40,7 @@ const Footer = () => (
           <div className="flex flex-col gap-3 text-sm text-espresso-foreground/70">
             <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-secondary shrink-0" /> 123 Blossom Lane, Garden District</div>
             <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-secondary transition-colors"><Phone className="w-4 h-4 text-secondary" /> (555) 123-4567</a>
-            <a href="mailto:hello@brewandbloom.com" className="flex items-center gap-2 hover:text-secondary transition-colors"><Mail className="w-4 h-4 text-secondary" /> hello@brewandbloom.com</a>
+            <a href="mailto:hello@kcupcafe.com" className="flex items-center gap-2 hover:text-secondary transition-colors"><Mail className="w-4 h-4 text-secondary" /> hello@kcupcafe.com</a>
           </div>
         </div>
 
@@ -61,7 +60,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-espresso-foreground/10 mt-12 pt-8 text-center text-xs text-espresso-foreground/50">
-        © 2026 Brew & Bloom. All rights reserved.
+        © 2026 K Cup Cafe. All rights reserved.
       </div>
     </div>
   </footer>
