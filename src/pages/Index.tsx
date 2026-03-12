@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Star, Clock, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroCafe from "@/assets/hero-cafe.jpg";
+import heroBanner from "@/assets/hero-cafe-banner.jpg";
 import latteArt from "@/assets/latte-art.jpg";
 import cafeInterior from "@/assets/cafe-interior.jpg";
 import pastries from "@/assets/pastries.jpg";
@@ -15,8 +15,8 @@ const heroTaglines = [
 ];
 
 const dailySpecials = [
-  { name: "Caramel Cloud Latte", price: "$5.50", desc: "Velvety espresso with house-made caramel" },
-  { name: "Lavender Honey Croissant", price: "$4.25", desc: "Buttery layers with floral sweetness" },
+  { name: "Caramel Cloud Latte", price: "₹349", desc: "Velvety espresso with house-made caramel" },
+  { name: "Lavender Honey Croissant", price: "₹249", desc: "Buttery layers with floral sweetness" },
 ];
 
 const features = [
@@ -37,7 +37,7 @@ const Index = () => {
     <main>
       {/* Hero */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
-        <img src={heroCafe} alt="K Cup Cafe interior" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={heroBanner} alt="K Cup Cafe — steaming coffee on wooden table" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
 
         <div className="relative z-10 container-cafe h-full flex items-center">
@@ -87,7 +87,6 @@ const Index = () => {
               </Link>
             </motion.div>
 
-            {/* Hero dots */}
             <div className="flex gap-2 mt-10">
               {heroTaglines.map((_, i) => (
                 <button
@@ -151,8 +150,8 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   From the aroma of freshly ground beans to the warmth of our sun-drenched reading nook, every corner of K Cup Cafe is designed to make you feel at home.
                 </p>
-                <Link to="/experience" className="btn-primary-cafe">
-                  Explore the Experience <ArrowRight className="w-4 h-4 ml-2" />
+                <Link to="/about" className="btn-primary-cafe">
+                  Our Story <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
               <div className="grid grid-cols-2 gap-4">

@@ -58,7 +58,6 @@ const Reservation = () => {
               ) : (
                 <motion.div key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                   <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-8 space-y-6">
-                    {/* Name & Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Full Name</label>
@@ -69,14 +68,10 @@ const Reservation = () => {
                         <input required type="email" value={form.email} onChange={(e) => setForm((s) => ({ ...s, email: e.target.value }))} className="w-full py-3 px-4 rounded-xl bg-muted/50 border border-border focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all text-sm" placeholder="john@example.com" />
                       </div>
                     </div>
-
-                    {/* Date */}
                     <div>
                       <label className="text-xs font-medium text-muted-foreground mb-1.5 flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> Date</label>
                       <input required type="date" min={today} value={form.date} onChange={(e) => setForm((s) => ({ ...s, date: e.target.value }))} className="w-full py-3 px-4 rounded-xl bg-muted/50 border border-border focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all text-sm" />
                     </div>
-
-                    {/* Time */}
                     <div>
                       <label className="text-xs font-medium text-muted-foreground mb-1.5 flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> Time</label>
                       <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
@@ -94,8 +89,6 @@ const Reservation = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Guests */}
                     <div>
                       <label className="text-xs font-medium text-muted-foreground mb-1.5 flex items-center gap-1.5"><Users className="w-3.5 h-3.5" /> Number of Guests</label>
                       <div className="flex gap-2">
@@ -113,7 +106,6 @@ const Reservation = () => {
                         ))}
                       </div>
                     </div>
-
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
