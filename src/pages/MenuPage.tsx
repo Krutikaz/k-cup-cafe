@@ -1,43 +1,65 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Star, ImageIcon } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+
+import espressoImg from "@/assets/menu/espresso.jpg";
+import caramelLatteImg from "@/assets/menu/caramel-latte.jpg";
+import coldBrewImg from "@/assets/menu/cold-brew.jpg";
+import flatWhiteImg from "@/assets/menu/flat-white.jpg";
+import mochaImg from "@/assets/menu/mocha.jpg";
+import pourOverImg from "@/assets/menu/pour-over.jpg";
+import matchaImg from "@/assets/menu/matcha.jpg";
+import chaiImg from "@/assets/menu/chai.jpg";
+import earlGreyImg from "@/assets/menu/earl-grey.jpg";
+import jasmineGreenImg from "@/assets/menu/jasmine-green.jpg";
+import rooibosImg from "@/assets/menu/rooibos.jpg";
+import avocadoToastImg from "@/assets/menu/avocado-toast.jpg";
+import granolaImg from "@/assets/menu/granola.jpg";
+import paniniImg from "@/assets/menu/panini.jpg";
+import bruschettaImg from "@/assets/menu/bruschetta.jpg";
+import tiramisuImg from "@/assets/menu/tiramisu.jpg";
+import lavenderCroissantImg from "@/assets/menu/lavender-croissant.jpg";
+import lavaCakeImg from "@/assets/menu/lava-cake.jpg";
+import carrotCakeImg from "@/assets/menu/carrot-cake.jpg";
+import berryTartImg from "@/assets/menu/berry-tart.jpg";
 
 interface MenuItem {
   name: string;
   price: string;
   desc: string;
   bestseller?: boolean;
+  image: string;
 }
 
 const menuData: Record<string, MenuItem[]> = {
   Coffee: [
-    { name: "Espresso", price: "$3.50", desc: "Bold and intense single-origin shot" },
-    { name: "Caramel Cloud Latte", price: "$5.50", desc: "Velvety espresso with house-made caramel foam", bestseller: true },
-    { name: "Cold Brew", price: "$4.75", desc: "24-hour steeped, smooth and refreshing" },
-    { name: "Flat White", price: "$4.50", desc: "Rich microfoam with double ristretto" },
-    { name: "Mocha", price: "$5.25", desc: "Belgian chocolate meets espresso perfection", bestseller: true },
-    { name: "Pour Over", price: "$5.00", desc: "Hand-poured single-origin, rotated weekly" },
+    { name: "Espresso", price: "$3.50", desc: "Bold and intense single-origin shot", image: espressoImg },
+    { name: "Caramel Cloud Latte", price: "$5.50", desc: "Velvety espresso with house-made caramel foam", bestseller: true, image: caramelLatteImg },
+    { name: "Cold Brew", price: "$4.75", desc: "24-hour steeped, smooth and refreshing", image: coldBrewImg },
+    { name: "Flat White", price: "$4.50", desc: "Rich microfoam with double ristretto", image: flatWhiteImg },
+    { name: "Mocha", price: "$5.25", desc: "Belgian chocolate meets espresso perfection", bestseller: true, image: mochaImg },
+    { name: "Pour Over", price: "$5.00", desc: "Hand-poured single-origin, rotated weekly", image: pourOverImg },
   ],
   Tea: [
-    { name: "Matcha Latte", price: "$5.00", desc: "Ceremonial-grade matcha, oat milk", bestseller: true },
-    { name: "Chai Spice", price: "$4.50", desc: "House-blended spices with steamed milk" },
-    { name: "Earl Grey", price: "$3.75", desc: "Classic bergamot-infused black tea" },
-    { name: "Jasmine Green", price: "$3.75", desc: "Delicate floral notes, light and refreshing" },
-    { name: "Rooibos Vanilla", price: "$4.00", desc: "Caffeine-free with natural vanilla" },
+    { name: "Matcha Latte", price: "$5.00", desc: "Ceremonial-grade matcha, oat milk", bestseller: true, image: matchaImg },
+    { name: "Chai Spice", price: "$4.50", desc: "House-blended spices with steamed milk", image: chaiImg },
+    { name: "Earl Grey", price: "$3.75", desc: "Classic bergamot-infused black tea", image: earlGreyImg },
+    { name: "Jasmine Green", price: "$3.75", desc: "Delicate floral notes, light and refreshing", image: jasmineGreenImg },
+    { name: "Rooibos Vanilla", price: "$4.00", desc: "Caffeine-free with natural vanilla", image: rooibosImg },
   ],
   Snacks: [
-    { name: "Avocado Toast", price: "$8.50", desc: "Sourdough, poached egg, chili flakes", bestseller: true },
-    { name: "Granola Bowl", price: "$7.00", desc: "Greek yogurt, seasonal fruits, honey" },
-    { name: "Grilled Panini", price: "$9.00", desc: "Mozzarella, pesto, sun-dried tomato" },
-    { name: "Bruschetta", price: "$6.50", desc: "Fresh tomatoes, basil, balsamic glaze" },
+    { name: "Avocado Toast", price: "$8.50", desc: "Sourdough, poached egg, chili flakes", bestseller: true, image: avocadoToastImg },
+    { name: "Granola Bowl", price: "$7.00", desc: "Greek yogurt, seasonal fruits, honey", image: granolaImg },
+    { name: "Grilled Panini", price: "$9.00", desc: "Mozzarella, pesto, sun-dried tomato", image: paniniImg },
+    { name: "Bruschetta", price: "$6.50", desc: "Fresh tomatoes, basil, balsamic glaze", image: bruschettaImg },
   ],
   Desserts: [
-    { name: "Tiramisu", price: "$6.50", desc: "Classic Italian, mascarpone & espresso", bestseller: true },
-    { name: "Lavender Honey Croissant", price: "$4.25", desc: "Buttery layers with floral sweetness" },
-    { name: "Chocolate Lava Cake", price: "$7.00", desc: "Warm center, vanilla bean gelato" },
-    { name: "Carrot Cake", price: "$5.50", desc: "Cream cheese frosting, toasted walnuts" },
-    { name: "Berry Tart", price: "$5.75", desc: "Almond crust, pastry cream, fresh berries" },
+    { name: "Tiramisu", price: "$6.50", desc: "Classic Italian, mascarpone & espresso", bestseller: true, image: tiramisuImg },
+    { name: "Lavender Honey Croissant", price: "$4.25", desc: "Buttery layers with floral sweetness", image: lavenderCroissantImg },
+    { name: "Chocolate Lava Cake", price: "$7.00", desc: "Warm center, vanilla bean gelato", image: lavaCakeImg },
+    { name: "Carrot Cake", price: "$5.50", desc: "Cream cheese frosting, toasted walnuts", image: carrotCakeImg },
+    { name: "Berry Tart", price: "$5.75", desc: "Almond crust, pastry cream, fresh berries", image: berryTartImg },
   ],
 };
 
@@ -104,12 +126,13 @@ const MenuPage = () => {
                   whileHover={{ y: -4 }}
                   className="glass-card rounded-2xl overflow-hidden relative group"
                 >
-                  {/* Image placeholder */}
-                  <div className="w-full h-40 bg-muted border-b border-border flex items-center justify-center">
-                    <div className="text-center">
-                      <ImageIcon className="w-8 h-8 text-muted-foreground/30 mx-auto mb-1" />
-                      <p className="text-[10px] text-muted-foreground/40">Add image</p>
-                    </div>
+                  <div className="w-full h-44 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
                   </div>
 
                   <div className="p-5">

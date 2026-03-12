@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Star, Clock, Sparkles, ImageIcon } from "lucide-react";
+import { ArrowRight, Star, Clock, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import heroCafe from "@/assets/hero-cafe.jpg";
+import latteArt from "@/assets/latte-art.jpg";
+import cafeInterior from "@/assets/cafe-interior.jpg";
+import pastries from "@/assets/pastries.jpg";
 
 const heroTaglines = [
   "Where Every Cup Tells a Story",
@@ -32,16 +36,9 @@ const Index = () => {
   return (
     <main>
       {/* Hero */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden bg-gradient-to-br from-primary via-espresso to-primary">
-        {/* Placeholder for hero background image */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-primary-foreground/30">
-            <ImageIcon className="w-16 h-16 mx-auto mb-3" />
-            <p className="text-sm font-medium">Add your hero image here</p>
-            <p className="text-xs mt-1">Replace this section's background with your cafe photo</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-espresso/80 via-espresso/50 to-transparent" />
+      <section className="relative h-screen min-h-[600px] overflow-hidden">
+        <img src={heroCafe} alt="K Cup Cafe interior" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
 
         <div className="relative z-10 container-cafe h-full flex items-center">
           <div className="max-w-xl">
@@ -124,7 +121,7 @@ const Index = () => {
         <div className="container-cafe">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Why Brew & Bloom?</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Why K Cup Cafe?</h2>
               <p className="text-muted-foreground max-w-md mx-auto">More than a coffee shop — a sanctuary for the senses.</p>
             </div>
           </AnimatedSection>
@@ -152,25 +149,22 @@ const Index = () => {
               <div>
                 <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Step Into Our World</h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  From the aroma of freshly ground beans to the warmth of our sun-drenched reading nook, every corner of Brew & Bloom is designed to make you feel at home.
+                  From the aroma of freshly ground beans to the warmth of our sun-drenched reading nook, every corner of K Cup Cafe is designed to make you feel at home.
                 </p>
                 <Link to="/experience" className="btn-primary-cafe">
                   Explore the Experience <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                {["Your image 1", "Your image 2", "Your image 3"].map((label, i) => (
+                {[latteArt, cafeInterior, pastries].map((img, i) => (
                   <motion.div
                     key={i}
                     whileHover={{ scale: 1.03 }}
-                    className={`rounded-2xl overflow-hidden shadow-lg bg-muted border-2 border-dashed border-border flex items-center justify-center ${
+                    className={`rounded-2xl overflow-hidden shadow-lg ${
                       i === 2 ? "col-span-2 h-40" : i === 1 ? "mt-8 h-48" : "h-48"
                     }`}
                   >
-                    <div className="text-center p-4">
-                      <ImageIcon className="w-8 h-8 text-muted-foreground/40 mx-auto mb-2" />
-                      <p className="text-xs text-muted-foreground/60">{label}</p>
-                    </div>
+                    <img src={img} alt="K Cup Cafe" className="w-full h-full object-cover" loading="lazy" />
                   </motion.div>
                 ))}
               </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -34,18 +35,17 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/90 backdrop-blur-lg shadow-md border-b border-border/50"
-          : "bg-transparent"
+          ? "bg-card/95 backdrop-blur-lg shadow-md border-b border-border/50"
+          : "bg-espresso/80 backdrop-blur-sm"
       }`}
     >
       <nav className="container-cafe flex items-center justify-between h-16 sm:h-20">
         <Link to="/" className="flex items-center gap-2 group">
-          {/* Replace with your logo */}
-          <div className="w-8 h-8 rounded-lg bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary font-heading font-bold text-sm">
-            B
-          </div>
-          <span className="font-heading text-xl sm:text-2xl font-bold text-foreground">
-            Brew & <span className="text-secondary">Bloom</span>
+          <img src={logo} alt="K Cup Cafe" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+          <span className={`font-heading text-xl sm:text-2xl font-bold transition-colors ${
+            scrolled ? "text-foreground" : "text-primary-foreground"
+          }`}>
+            K Cup <span className="text-secondary">Cafe</span>
           </span>
         </Link>
 
@@ -58,14 +58,16 @@ const Navbar = () => {
               className={`relative px-4 py-2 text-sm font-body font-medium tracking-wide transition-colors duration-200 rounded-full ${
                 location.pathname === link.to
                   ? "text-secondary"
-                  : "text-foreground/70 hover:text-foreground"
+                  : scrolled
+                    ? "text-foreground/70 hover:text-foreground"
+                    : "text-primary-foreground/80 hover:text-primary-foreground"
               }`}
             >
               {link.label}
               {location.pathname === link.to && (
                 <motion.div
                   layoutId="nav-active"
-                  className="absolute inset-0 bg-secondary/10 rounded-full"
+                  className="absolute inset-0 bg-secondary/15 rounded-full"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -76,7 +78,9 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
+          className={`lg:hidden p-2 rounded-lg transition-colors ${
+            scrolled ? "text-foreground hover:bg-muted" : "text-primary-foreground hover:bg-primary-foreground/10"
+          }`}
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
