@@ -37,7 +37,7 @@ const Index = () => {
     <main>
       {/* Hero with GIF */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
-        <img src={heroGif} alt="K Cup Cafe — steaming coffee in cozy cafe" className="absolute inset-0 w-full h-full object-cover" />
+        <video src={heroVideo} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
 
         <div className="relative z-10 container-cafe h-full flex items-center">
