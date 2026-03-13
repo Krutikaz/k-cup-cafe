@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Star, Clock, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroBanner from "@/assets/hero-cafe-banner.jpg";
+import heroGif from "@/assets/coffee-steam.gif";
 import latteArt from "@/assets/latte-art.jpg";
 import cafeInterior from "@/assets/cafe-interior.jpg";
 import pastries from "@/assets/pastries.jpg";
@@ -35,9 +35,9 @@ const Index = () => {
 
   return (
     <main>
-      {/* Hero */}
+      {/* Hero with GIF */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
-        <img src={heroBanner} alt="K Cup Cafe — steaming coffee on wooden table" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={heroGif} alt="K Cup Cafe — steaming coffee in cozy cafe" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
 
         <div className="relative z-10 container-cafe h-full flex items-center">
