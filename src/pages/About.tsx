@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ImageIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import galleryLatte from "@/assets/gallery-latte.jpg";
+import galleryInterior from "@/assets/gallery-interior.jpg";
+import galleryPastries from "@/assets/gallery-pastries.jpg";
+import galleryRoasting from "@/assets/gallery-roasting.jpg";
 
 const timeline = [
   { year: "2018", title: "The Dream Begins", desc: "Two friends with a shared passion for specialty coffee opened a small roastery." },
@@ -10,6 +14,13 @@ const timeline = [
   { year: "2021", title: "Community Hub", desc: "We expanded with a reading nook, live music nights, and local art exhibits." },
   { year: "2023", title: "Award-Winning", desc: "Named 'Best Artisan Coffee Shop' by City Life Magazine." },
   { year: "2025", title: "Growing Family", desc: "Opened our second location and launched our signature bean subscription." },
+];
+
+const galleryImages = [
+  { src: galleryLatte, alt: "Latte art being poured", label: "Latte Art" },
+  { src: galleryInterior, alt: "Cozy cafe interior", label: "Our Space" },
+  { src: galleryPastries, alt: "Freshly baked pastries", label: "Fresh Pastries" },
+  { src: galleryRoasting, alt: "Coffee beans roasting", label: "Bean Roasting" },
 ];
 
 const About = () => (
@@ -67,18 +78,19 @@ const About = () => (
     <section className="section-padding bg-muted/50">
       <div className="container-cafe">
         <AnimatedSection>
-          <h2 className="font-heading text-3xl font-bold text-center mb-10">Gallery</h2>
+          <h2 className="font-heading text-3xl font-bold text-center mb-4">Gallery</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-md mx-auto">A glimpse into the K Cup Cafe experience</p>
         </AnimatedSection>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((i) => (
+          {galleryImages.map((img, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="rounded-2xl overflow-hidden shadow-lg cursor-pointer aspect-square bg-muted border-2 border-dashed border-border flex items-center justify-center"
+                className="rounded-2xl overflow-hidden shadow-lg cursor-pointer aspect-square relative group"
               >
-                <div className="text-center p-4">
-                  <ImageIcon className="w-10 h-10 text-muted-foreground/40 mx-auto mb-2" />
-                  <p className="text-xs text-muted-foreground/60">Gallery image {i}</p>
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-primary-foreground font-heading font-semibold text-sm">{img.label}</span>
                 </div>
               </motion.div>
             </AnimatedSection>
