@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Star, Clock, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroGif from "@/assets/coffee-steam.gif";
+import heroVideo from "@/assets/hero-cafe-video.mp4";
 import latteArt from "@/assets/latte-art.jpg";
 import cafeInterior from "@/assets/cafe-interior.jpg";
 import pastries from "@/assets/pastries.jpg";
