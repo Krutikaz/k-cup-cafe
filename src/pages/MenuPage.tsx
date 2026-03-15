@@ -9,20 +9,53 @@ import coldBrewImg from "@/assets/menu/cold-brew.jpg";
 import flatWhiteImg from "@/assets/menu/flat-white.jpg";
 import mochaImg from "@/assets/menu/mocha.jpg";
 import pourOverImg from "@/assets/menu/pour-over.jpg";
+import americanoImg from "@/assets/menu/americano.jpg";
+import cappuccinoImg from "@/assets/menu/cappuccino.jpg";
+import irishCoffeeImg from "@/assets/menu/irish-coffee.jpg";
+import affogatoImg from "@/assets/menu/affogato.jpg";
+import cortadoImg from "@/assets/menu/cortado.jpg";
+import vietnameseImg from "@/assets/menu/vietnamese-coffee.jpg";
+import hazelnutLatteImg from "@/assets/menu/hazelnut-latte.jpg";
+import espressoTonicImg from "@/assets/menu/espresso-tonic.jpg";
+
 import matchaImg from "@/assets/menu/matcha.jpg";
 import chaiImg from "@/assets/menu/chai.jpg";
 import earlGreyImg from "@/assets/menu/earl-grey.jpg";
 import jasmineGreenImg from "@/assets/menu/jasmine-green.jpg";
 import rooibosImg from "@/assets/menu/rooibos.jpg";
+import cuttingChaiImg from "@/assets/menu/cutting-chai.jpg";
+import peachTeaImg from "@/assets/menu/peach-tea.jpg";
+import chamomileImg from "@/assets/menu/chamomile.jpg";
+import roseCardamomImg from "@/assets/menu/rose-cardamom.jpg";
+import lemonGingerImg from "@/assets/menu/lemon-ginger.jpg";
+import turmericLatteImg from "@/assets/menu/turmeric-latte.jpg";
+import hibiscusImg from "@/assets/menu/hibiscus.jpg";
+
 import avocadoToastImg from "@/assets/menu/avocado-toast.jpg";
 import granolaImg from "@/assets/menu/granola.jpg";
 import paniniImg from "@/assets/menu/panini.jpg";
 import bruschettaImg from "@/assets/menu/bruschetta.jpg";
+import garlicBreadImg from "@/assets/menu/garlic-bread.jpg";
+import hummusImg from "@/assets/menu/hummus.jpg";
+import clubSandwichImg from "@/assets/menu/club-sandwich.jpg";
+import falafelWrapImg from "@/assets/menu/falafel-wrap.jpg";
+import quesadillaImg from "@/assets/menu/quesadilla.jpg";
+import spinachSandwichImg from "@/assets/menu/spinach-sandwich.jpg";
+import nachosImg from "@/assets/menu/nachos.jpg";
+import pestoPastaImg from "@/assets/menu/pesto-pasta.jpg";
+
 import tiramisuImg from "@/assets/menu/tiramisu.jpg";
 import lavenderCroissantImg from "@/assets/menu/lavender-croissant.jpg";
 import lavaCakeImg from "@/assets/menu/lava-cake.jpg";
 import carrotCakeImg from "@/assets/menu/carrot-cake.jpg";
 import berryTartImg from "@/assets/menu/berry-tart.jpg";
+import banoffeeImg from "@/assets/menu/banoffee.jpg";
+import cheesecakeImg from "@/assets/menu/cheesecake.jpg";
+import brownieSundaeImg from "@/assets/menu/brownie-sundae.jpg";
+import pannaCottaImg from "@/assets/menu/panna-cotta.jpg";
+import kulfiImg from "@/assets/menu/kulfi.jpg";
+import eclairImg from "@/assets/menu/eclair.jpg";
+import churrosImg from "@/assets/menu/churros.jpg";
 
 interface MenuItem {
   name: string;
@@ -40,14 +73,14 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Flat White", price: "₹279", desc: "Rich microfoam with double ristretto", image: flatWhiteImg },
     { name: "Mocha", price: "₹329", desc: "Belgian chocolate meets espresso perfection", bestseller: true, image: mochaImg },
     { name: "Pour Over", price: "₹319", desc: "Hand-poured single-origin, rotated weekly", image: pourOverImg },
-    { name: "Americano", price: "₹219", desc: "Smooth espresso with hot water, clean finish", image: espressoImg },
-    { name: "Cappuccino", price: "₹269", desc: "Classic Italian style with thick velvety foam", image: flatWhiteImg },
-    { name: "Irish Coffee", price: "₹399", desc: "Espresso with whiskey cream and brown sugar", image: mochaImg },
-    { name: "Affogato", price: "₹349", desc: "Vanilla gelato drowned in hot espresso", image: caramelLatteImg },
-    { name: "Cortado", price: "₹249", desc: "Equal parts espresso and steamed milk, smooth and balanced", image: espressoImg },
-    { name: "Vietnamese Coffee", price: "₹289", desc: "Strong drip coffee with sweetened condensed milk", image: coldBrewImg },
-    { name: "Hazelnut Latte", price: "₹339", desc: "Creamy latte with roasted hazelnut syrup", image: caramelLatteImg },
-    { name: "Espresso Tonic", price: "₹309", desc: "Chilled espresso over sparkling tonic water with lime", image: pourOverImg },
+    { name: "Americano", price: "₹219", desc: "Smooth espresso with hot water, clean finish", image: americanoImg },
+    { name: "Cappuccino", price: "₹269", desc: "Classic Italian style with thick velvety foam", image: cappuccinoImg },
+    { name: "Irish Coffee", price: "₹399", desc: "Espresso with whiskey cream and brown sugar", image: irishCoffeeImg },
+    { name: "Affogato", price: "₹349", desc: "Vanilla gelato drowned in hot espresso", image: affogatoImg },
+    { name: "Cortado", price: "₹249", desc: "Equal parts espresso and steamed milk, smooth and balanced", image: cortadoImg },
+    { name: "Vietnamese Coffee", price: "₹289", desc: "Strong drip coffee with sweetened condensed milk", image: vietnameseImg },
+    { name: "Hazelnut Latte", price: "₹339", desc: "Creamy latte with roasted hazelnut syrup", image: hazelnutLatteImg },
+    { name: "Espresso Tonic", price: "₹309", desc: "Chilled espresso over sparkling tonic water with lime", image: espressoTonicImg },
   ],
   Tea: [
     { name: "Matcha Latte", price: "₹319", desc: "Ceremonial-grade matcha, oat milk", bestseller: true, image: matchaImg },
@@ -55,27 +88,27 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Earl Grey", price: "₹219", desc: "Classic bergamot-infused black tea", image: earlGreyImg },
     { name: "Jasmine Green", price: "₹219", desc: "Delicate floral notes, light and refreshing", image: jasmineGreenImg },
     { name: "Rooibos Vanilla", price: "₹239", desc: "Caffeine-free with natural vanilla", image: rooibosImg },
-    { name: "Masala Cutting Chai", price: "₹149", desc: "Authentic Indian spiced tea, strong and aromatic", bestseller: true, image: chaiImg },
-    { name: "Iced Peach Tea", price: "₹269", desc: "Chilled black tea with fresh peach syrup", image: jasmineGreenImg },
-    { name: "Chamomile Honey", price: "₹229", desc: "Calming chamomile with raw wildflower honey", image: rooibosImg },
-    { name: "Rose Cardamom Tea", price: "₹259", desc: "Fragrant rose petals with crushed cardamom", image: earlGreyImg },
-    { name: "Iced Lemon Ginger", price: "₹239", desc: "Zesty ginger root with fresh lemon, served cold", image: jasmineGreenImg },
-    { name: "Turmeric Latte", price: "₹279", desc: "Golden milk with turmeric, cinnamon, and honey", bestseller: true, image: matchaImg },
-    { name: "Hibiscus Cooler", price: "₹249", desc: "Tangy hibiscus iced tea with mint and lime", image: rooibosImg },
+    { name: "Masala Cutting Chai", price: "₹149", desc: "Authentic Indian spiced tea, strong and aromatic", bestseller: true, image: cuttingChaiImg },
+    { name: "Iced Peach Tea", price: "₹269", desc: "Chilled black tea with fresh peach syrup", image: peachTeaImg },
+    { name: "Chamomile Honey", price: "₹229", desc: "Calming chamomile with raw wildflower honey", image: chamomileImg },
+    { name: "Rose Cardamom Tea", price: "₹259", desc: "Fragrant rose petals with crushed cardamom", image: roseCardamomImg },
+    { name: "Iced Lemon Ginger", price: "₹239", desc: "Zesty ginger root with fresh lemon, served cold", image: lemonGingerImg },
+    { name: "Turmeric Latte", price: "₹279", desc: "Golden milk with turmeric, cinnamon, and honey", bestseller: true, image: turmericLatteImg },
+    { name: "Hibiscus Cooler", price: "₹249", desc: "Tangy hibiscus iced tea with mint and lime", image: hibiscusImg },
   ],
   Snacks: [
     { name: "Avocado Toast", price: "₹449", desc: "Sourdough, poached egg, chili flakes", bestseller: true, image: avocadoToastImg },
     { name: "Granola Bowl", price: "₹379", desc: "Greek yogurt, seasonal fruits, honey", image: granolaImg },
     { name: "Grilled Panini", price: "₹499", desc: "Mozzarella, pesto, sun-dried tomato", image: paniniImg },
     { name: "Bruschetta", price: "₹349", desc: "Fresh tomatoes, basil, balsamic glaze", image: bruschettaImg },
-    { name: "Cheese Garlic Bread", price: "₹299", desc: "Toasted baguette with herb butter and mozzarella", image: paniniImg },
-    { name: "Hummus Platter", price: "₹399", desc: "Creamy hummus with pita chips and veggies", image: bruschettaImg },
-    { name: "Club Sandwich", price: "₹429", desc: "Triple-layered with chicken, egg, and veggies", image: avocadoToastImg },
-    { name: "Falafel Wrap", price: "₹379", desc: "Crispy falafel with tahini and fresh salad", image: granolaImg },
-    { name: "Mushroom Quesadilla", price: "₹419", desc: "Sautéed mushrooms with melted cheese in a crispy tortilla", image: paniniImg },
-    { name: "Spinach Corn Sandwich", price: "₹359", desc: "Creamy spinach-corn filling on multigrain bread", bestseller: true, image: avocadoToastImg },
-    { name: "Loaded Nachos", price: "₹449", desc: "Tortilla chips with salsa, jalapeños, cheese, and sour cream", image: bruschettaImg },
-    { name: "Pesto Pasta Bowl", price: "₹479", desc: "Penne in basil pesto with cherry tomatoes and parmesan", image: granolaImg },
+    { name: "Cheese Garlic Bread", price: "₹299", desc: "Toasted baguette with herb butter and mozzarella", image: garlicBreadImg },
+    { name: "Hummus Platter", price: "₹399", desc: "Creamy hummus with pita chips and veggies", image: hummusImg },
+    { name: "Club Sandwich", price: "₹429", desc: "Triple-layered with chicken, egg, and veggies", image: clubSandwichImg },
+    { name: "Falafel Wrap", price: "₹379", desc: "Crispy falafel with tahini and fresh salad", image: falafelWrapImg },
+    { name: "Mushroom Quesadilla", price: "₹419", desc: "Sautéed mushrooms with melted cheese in a crispy tortilla", image: quesadillaImg },
+    { name: "Spinach Corn Sandwich", price: "₹359", desc: "Creamy spinach-corn filling on multigrain bread", bestseller: true, image: spinachSandwichImg },
+    { name: "Loaded Nachos", price: "₹449", desc: "Tortilla chips with salsa, jalapeños, cheese, and sour cream", image: nachosImg },
+    { name: "Pesto Pasta Bowl", price: "₹479", desc: "Penne in basil pesto with cherry tomatoes and parmesan", image: pestoPastaImg },
   ],
   Desserts: [
     { name: "Tiramisu", price: "₹399", desc: "Classic Italian, mascarpone & espresso", bestseller: true, image: tiramisuImg },
@@ -83,13 +116,13 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Chocolate Lava Cake", price: "₹449", desc: "Warm center, vanilla bean gelato", image: lavaCakeImg },
     { name: "Carrot Cake", price: "₹329", desc: "Cream cheese frosting, toasted walnuts", image: carrotCakeImg },
     { name: "Berry Tart", price: "₹349", desc: "Almond crust, pastry cream, fresh berries", image: berryTartImg },
-    { name: "Banoffee Pie", price: "₹379", desc: "Banana, toffee, whipped cream on biscuit base", image: lavaCakeImg },
-    { name: "Cheesecake", price: "₹399", desc: "New York style with strawberry compote", bestseller: true, image: berryTartImg },
-    { name: "Brownie Sundae", price: "₹429", desc: "Warm fudge brownie with ice cream and nuts", image: tiramisuImg },
-    { name: "Mango Panna Cotta", price: "₹359", desc: "Silky Italian custard with Alphonso mango coulis", image: lavenderCroissantImg },
-    { name: "Pistachio Kulfi", price: "₹249", desc: "Traditional Indian frozen dessert with crushed pistachios", image: carrotCakeImg },
-    { name: "Chocolate Éclair", price: "₹299", desc: "Choux pastry filled with cream, topped with ganache", bestseller: true, image: lavaCakeImg },
-    { name: "Cinnamon Churros", price: "₹319", desc: "Crispy churros dusted with cinnamon sugar, chocolate dip", image: tiramisuImg },
+    { name: "Banoffee Pie", price: "₹379", desc: "Banana, toffee, whipped cream on biscuit base", image: banoffeeImg },
+    { name: "Cheesecake", price: "₹399", desc: "New York style with strawberry compote", bestseller: true, image: cheesecakeImg },
+    { name: "Brownie Sundae", price: "₹429", desc: "Warm fudge brownie with ice cream and nuts", image: brownieSundaeImg },
+    { name: "Mango Panna Cotta", price: "₹359", desc: "Silky Italian custard with Alphonso mango coulis", image: pannaCottaImg },
+    { name: "Pistachio Kulfi", price: "₹249", desc: "Traditional Indian frozen dessert with crushed pistachios", image: kulfiImg },
+    { name: "Chocolate Éclair", price: "₹299", desc: "Choux pastry filled with cream, topped with ganache", bestseller: true, image: eclairImg },
+    { name: "Cinnamon Churros", price: "₹319", desc: "Crispy churros dusted with cinnamon sugar, chocolate dip", image: churrosImg },
   ],
 };
 
