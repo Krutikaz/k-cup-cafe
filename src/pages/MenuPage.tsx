@@ -44,6 +44,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Cappuccino", price: "₹269", desc: "Classic Italian style with thick velvety foam", image: flatWhiteImg },
     { name: "Irish Coffee", price: "₹399", desc: "Espresso with whiskey cream and brown sugar", image: mochaImg },
     { name: "Affogato", price: "₹349", desc: "Vanilla gelato drowned in hot espresso", image: caramelLatteImg },
+    { name: "Cortado", price: "₹249", desc: "Equal parts espresso and steamed milk, smooth and balanced", image: espressoImg },
+    { name: "Vietnamese Coffee", price: "₹289", desc: "Strong drip coffee with sweetened condensed milk", image: coldBrewImg },
+    { name: "Hazelnut Latte", price: "₹339", desc: "Creamy latte with roasted hazelnut syrup", image: caramelLatteImg },
+    { name: "Espresso Tonic", price: "₹309", desc: "Chilled espresso over sparkling tonic water with lime", image: pourOverImg },
   ],
   Tea: [
     { name: "Matcha Latte", price: "₹319", desc: "Ceremonial-grade matcha, oat milk", bestseller: true, image: matchaImg },
@@ -54,6 +58,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Masala Cutting Chai", price: "₹149", desc: "Authentic Indian spiced tea, strong and aromatic", bestseller: true, image: chaiImg },
     { name: "Iced Peach Tea", price: "₹269", desc: "Chilled black tea with fresh peach syrup", image: jasmineGreenImg },
     { name: "Chamomile Honey", price: "₹229", desc: "Calming chamomile with raw wildflower honey", image: rooibosImg },
+    { name: "Rose Cardamom Tea", price: "₹259", desc: "Fragrant rose petals with crushed cardamom", image: earlGreyImg },
+    { name: "Iced Lemon Ginger", price: "₹239", desc: "Zesty ginger root with fresh lemon, served cold", image: jasmineGreenImg },
+    { name: "Turmeric Latte", price: "₹279", desc: "Golden milk with turmeric, cinnamon, and honey", bestseller: true, image: matchaImg },
+    { name: "Hibiscus Cooler", price: "₹249", desc: "Tangy hibiscus iced tea with mint and lime", image: rooibosImg },
   ],
   Snacks: [
     { name: "Avocado Toast", price: "₹449", desc: "Sourdough, poached egg, chili flakes", bestseller: true, image: avocadoToastImg },
@@ -64,6 +72,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Hummus Platter", price: "₹399", desc: "Creamy hummus with pita chips and veggies", image: bruschettaImg },
     { name: "Club Sandwich", price: "₹429", desc: "Triple-layered with chicken, egg, and veggies", image: avocadoToastImg },
     { name: "Falafel Wrap", price: "₹379", desc: "Crispy falafel with tahini and fresh salad", image: granolaImg },
+    { name: "Mushroom Quesadilla", price: "₹419", desc: "Sautéed mushrooms with melted cheese in a crispy tortilla", image: paniniImg },
+    { name: "Spinach Corn Sandwich", price: "₹359", desc: "Creamy spinach-corn filling on multigrain bread", bestseller: true, image: avocadoToastImg },
+    { name: "Loaded Nachos", price: "₹449", desc: "Tortilla chips with salsa, jalapeños, cheese, and sour cream", image: bruschettaImg },
+    { name: "Pesto Pasta Bowl", price: "₹479", desc: "Penne in basil pesto with cherry tomatoes and parmesan", image: granolaImg },
   ],
   Desserts: [
     { name: "Tiramisu", price: "₹399", desc: "Classic Italian, mascarpone & espresso", bestseller: true, image: tiramisuImg },
@@ -74,6 +86,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Banoffee Pie", price: "₹379", desc: "Banana, toffee, whipped cream on biscuit base", image: lavaCakeImg },
     { name: "Cheesecake", price: "₹399", desc: "New York style with strawberry compote", bestseller: true, image: berryTartImg },
     { name: "Brownie Sundae", price: "₹429", desc: "Warm fudge brownie with ice cream and nuts", image: tiramisuImg },
+    { name: "Mango Panna Cotta", price: "₹359", desc: "Silky Italian custard with Alphonso mango coulis", image: lavenderCroissantImg },
+    { name: "Pistachio Kulfi", price: "₹249", desc: "Traditional Indian frozen dessert with crushed pistachios", image: carrotCakeImg },
+    { name: "Chocolate Éclair", price: "₹299", desc: "Choux pastry filled with cream, topped with ganache", bestseller: true, image: lavaCakeImg },
+    { name: "Cinnamon Churros", price: "₹319", desc: "Crispy churros dusted with cinnamon sugar, chocolate dip", image: tiramisuImg },
   ],
 };
 
