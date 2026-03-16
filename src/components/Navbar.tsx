@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
   { to: "/menu", label: "Menu" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
   { to: "/reservation", label: "Book a Table" },
 ];
