@@ -376,7 +376,7 @@ const Index = () => {
                   </Link>
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-xl h-80">
+              <div className="rounded-2xl overflow-hidden shadow-xl h-56 sm:h-72 lg:h-80">
                 <img src={galleryOutdoor} alt="K Cup Cafe outdoor seating" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
