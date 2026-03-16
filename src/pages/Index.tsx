@@ -73,9 +73,9 @@ const Index = () => {
   return (
     <main>
       {/* Hero */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
+      <section className="relative h-[100svh] min-h-[500px] sm:min-h-[600px] overflow-hidden">
         <video src={heroVideo} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
+        <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-espresso/90 via-espresso/70 to-espresso/40" />
         <div className="relative z-10 container-cafe h-full flex items-center">
           <div className="max-w-xl">
             <motion.div
