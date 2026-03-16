@@ -102,7 +102,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-primary-foreground/80 text-lg mb-8 max-w-md"
+              className="text-primary-foreground/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-md"
             >
               Artisan coffee, fresh pastries, and a warm atmosphere where community blossoms.
             </motion.p>
