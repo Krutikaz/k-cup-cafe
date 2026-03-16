@@ -388,7 +388,7 @@ const Index = () => {
       <section className="section-padding">
         <div className="container-cafe">
           <AnimatedSection>
-            <div className="bg-espresso rounded-3xl p-10 sm:p-16 text-center text-espresso-foreground relative overflow-hidden">
+            <div className="bg-espresso rounded-2xl sm:rounded-3xl p-8 sm:p-16 text-center text-espresso-foreground relative overflow-hidden">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,hsl(32,60%,50%),transparent_70%)]" />
               <div className="relative z-10">
                 <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Reserve Your Table</h2>
