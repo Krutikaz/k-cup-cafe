@@ -157,7 +157,7 @@ const MenuPage = () => {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                   active === cat ? "text-secondary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
               >
