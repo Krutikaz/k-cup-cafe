@@ -146,7 +146,7 @@ const MenuPage = () => {
         <div className="container-cafe">
           <AnimatedSection>
             <div className="text-center mb-12">
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Our Menu</h1>
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Menu</h1>
               <p className="text-muted-foreground max-w-md mx-auto">Handcrafted drinks and freshly baked delights, made with love every day.</p>
             </div>
           </AnimatedSection>
