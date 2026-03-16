@@ -73,9 +73,9 @@ const Index = () => {
   return (
     <main>
       {/* Hero */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
+      <section className="relative h-[100svh] min-h-[500px] sm:min-h-[600px] overflow-hidden">
         <video src={heroVideo} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/60 to-espresso/30" />
+        <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-espresso/90 via-espresso/70 to-espresso/40" />
         <div className="relative z-10 container-cafe h-full flex items-center">
           <div className="max-w-xl">
             <motion.div
@@ -93,7 +93,7 @@ const Index = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
+                className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 sm:mb-6"
               >
                 {heroTaglines[heroIdx]}
               </motion.h1>
@@ -102,7 +102,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-primary-foreground/80 text-lg mb-8 max-w-md"
+              className="text-primary-foreground/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-md"
             >
               Artisan coffee, fresh pastries, and a warm atmosphere where community blossoms.
             </motion.p>
@@ -110,12 +110,12 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3 sm:gap-4"
             >
-              <Link to="/menu" className="btn-primary-cafe bg-secondary text-secondary-foreground hover:bg-caramel">
+              <Link to="/menu" className="btn-primary-cafe bg-secondary text-secondary-foreground hover:bg-caramel text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3">
                 View Menu <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
-              <Link to="/reservation" className="btn-secondary-cafe border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
+              <Link to="/reservation" className="btn-secondary-cafe border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3">
                 Book a Table
               </Link>
             </motion.div>
@@ -292,12 +292,12 @@ const Index = () => {
               <p className="text-muted-foreground max-w-md mx-auto">A glimpse into the everyday magic that happens here.</p>
             </div>
           </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
             {galleryImages.map((img, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className={`rounded-2xl overflow-hidden shadow-md ${i === 0 || i === 5 ? "row-span-2 h-full min-h-[280px]" : "h-52"}`}
+                  className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-md ${i === 0 || i === 5 ? "md:row-span-2 h-44 sm:h-52 md:h-full md:min-h-[280px]" : "h-44 sm:h-52"}`}
                 >
                   <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                 </motion.div>
@@ -376,7 +376,7 @@ const Index = () => {
                   </Link>
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-xl h-80">
+              <div className="rounded-2xl overflow-hidden shadow-xl h-56 sm:h-72 lg:h-80">
                 <img src={galleryOutdoor} alt="K Cup Cafe outdoor seating" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
@@ -388,7 +388,7 @@ const Index = () => {
       <section className="section-padding">
         <div className="container-cafe">
           <AnimatedSection>
-            <div className="bg-espresso rounded-3xl p-10 sm:p-16 text-center text-espresso-foreground relative overflow-hidden">
+            <div className="bg-espresso rounded-2xl sm:rounded-3xl p-8 sm:p-16 text-center text-espresso-foreground relative overflow-hidden">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,hsl(32,60%,50%),transparent_70%)]" />
               <div className="relative z-10">
                 <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">Reserve Your Table</h2>

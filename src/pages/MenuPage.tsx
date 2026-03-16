@@ -146,18 +146,18 @@ const MenuPage = () => {
         <div className="container-cafe">
           <AnimatedSection>
             <div className="text-center mb-12">
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Our Menu</h1>
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Menu</h1>
               <p className="text-muted-foreground max-w-md mx-auto">Handcrafted drinks and freshly baked delights, made with love every day.</p>
             </div>
           </AnimatedSection>
 
           {/* Tabs */}
-          <div className="flex justify-center gap-2 mb-12 flex-wrap">
+          <div className="flex justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 flex-wrap px-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                   active === cat ? "text-secondary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
               >
@@ -181,7 +181,7 @@ const MenuPage = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto"
             >
               {menuData[active].map((item) => (
                 <motion.div
@@ -189,7 +189,7 @@ const MenuPage = () => {
                   whileHover={{ y: -4 }}
                   className="glass-card rounded-2xl overflow-hidden relative group"
                 >
-                  <div className="w-full h-44 overflow-hidden">
+                  <div className="w-full h-36 sm:h-44 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.name}
