@@ -292,12 +292,12 @@ const Index = () => {
               <p className="text-muted-foreground max-w-md mx-auto">A glimpse into the everyday magic that happens here.</p>
             </div>
           </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
             {galleryImages.map((img, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className={`rounded-2xl overflow-hidden shadow-md ${i === 0 || i === 5 ? "row-span-2 h-full min-h-[280px]" : "h-52"}`}
+                  className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-md ${i === 0 || i === 5 ? "md:row-span-2 h-44 sm:h-52 md:h-full md:min-h-[280px]" : "h-44 sm:h-52"}`}
                 >
                   <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                 </motion.div>
