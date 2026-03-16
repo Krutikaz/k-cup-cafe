@@ -189,7 +189,7 @@ const MenuPage = () => {
                   whileHover={{ y: -4 }}
                   className="glass-card rounded-2xl overflow-hidden relative group"
                 >
-                  <div className="w-full h-44 overflow-hidden">
+                  <div className="w-full h-36 sm:h-44 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.name}
