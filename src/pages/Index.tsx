@@ -175,15 +175,10 @@ const Index = () => {
       {/* Stats Counter */}
       <section className="bg-espresso text-espresso-foreground py-16">
         <div className="container-cafe">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div>
-                  <div className="font-heading text-4xl sm:text-5xl font-bold text-secondary mb-2">
-                    <AnimatedCounter target={stat.value} />{stat.suffix}
-                  </div>
-                  <p className="text-espresso-foreground/70 text-sm font-medium">{stat.label}</p>
-                </div>
+                <AnimatedCounter end={stat.value} suffix={stat.suffix} label={stat.label} />
               </AnimatedSection>
             ))}
           </div>
