@@ -110,12 +110,12 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3 sm:gap-4"
             >
-              <Link to="/menu" className="btn-primary-cafe bg-secondary text-secondary-foreground hover:bg-caramel">
+              <Link to="/menu" className="btn-primary-cafe bg-secondary text-secondary-foreground hover:bg-caramel text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3">
                 View Menu <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
-              <Link to="/reservation" className="btn-secondary-cafe border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
+              <Link to="/reservation" className="btn-secondary-cafe border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3">
                 Book a Table
               </Link>
             </motion.div>
