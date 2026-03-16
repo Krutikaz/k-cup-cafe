@@ -152,7 +152,7 @@ const MenuPage = () => {
           </AnimatedSection>
 
           {/* Tabs */}
-          <div className="flex justify-center gap-2 mb-12 flex-wrap">
+          <div className="flex justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 flex-wrap px-2">
             {categories.map((cat) => (
               <button
                 key={cat}
